@@ -1,0 +1,22 @@
+inpgen.c:
+	generates random inputs for galelimited circuit
+
+	usage:
+	python inpgen.c S R SK RK
+	where S is number of suitors
+	R is number of reviewers
+	SK is K allotted slots for suitors to rank reviewers
+	RK is K allotted slots for reviewers to rank suitors
+
+	output: C program input for galelimited circuit
+
+
+ctopcy.py:
+	converts C input for galelimited into PCF input
+
+
+processpcf.py:
+	reads from stdin and discards pcf output that is not useful for comparing against C output
+
+
+
