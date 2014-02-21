@@ -1,12 +1,12 @@
 for ((i = 0; i < 50; i++))
 do
-	echo "$i : 20x20x5x5" >> log.txt
-	./cirtest.sh 20 20 5 5
+	echo "$i : 4x4x4x4" >> log.txt
+	./cirtest.sh 4 4 4 4
 done
 for ((i = 0; i < 50; i++))
 do
-  	echo "$i : 4x4x4x4" >> log.txt
-        ./cirtest.sh 4 4 4 4
+  	echo "$i : 20x20x5x5" >> log.txt
+        ./cirtest.sh 20 20 5 5
 done
 for ((i = 0; i < 50; i++))
 do
