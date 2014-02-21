@@ -4,8 +4,8 @@
 #define NIL NUM_SUITORS // MUST be chosen to be the greater of NUM_SUITORS and NUM_REVIEWERS
 
 // number of potential matches we permit each player to rank of the opposite party before declaring they would rather remain unmatched
-#define K_SUITORS 6
-#define K_REVIEWERS 6
+#define K_SUITORS 5
+#define K_REVIEWERS 5
 
 #define __CPROG__
 //#define __PCFPROG__
