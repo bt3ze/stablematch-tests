@@ -18,7 +18,7 @@ do
   	echo "$i : 30x10x10x4" >> log.txt
         ./cirtest.sh 30 10 10 4
 done
-for ((i = 0; i < 50; i++))
+for ((i = 0; i < 20; i++))
 do
   	echo "$i : 50x50x20x20" >> log.txt
         ./cirtest.sh 50 50 20 20
