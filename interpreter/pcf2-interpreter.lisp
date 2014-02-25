@@ -419,7 +419,7 @@ The functions that operate on pcf2-state objects should treat these objects as i
     (let ((newbase (+ newbase (pcf2-state-baseptr state)))
           )
       (check-mux-cnd)
-;      (format *error-output* "~&Function ~A, new base: ~A~%" fname newbase)
+      (format *error-output* "~&Function ~A, new base: ~A~%" fname newbase)
       (cond
         ((or (string-equal fname "alice")
              (string-equal fname "bob"))
@@ -497,9 +497,9 @@ The functions that operate on pcf2-state objects should treat these objects as i
           (let ((iptrbaseptr (first (pcf2-state-call-stack state)))
                 (call-stack (rest (pcf2-state-call-stack state)))
                 )
-;            (format *error-output* "~&Returning from funcall.  Clearing region from ~D to ~D~%"
-;                    (pcf2-state-baseptr state)
-;                    value)
+            (format *error-output* "~&Returning from funcall.  Clearing region from ~D to ~D~%"
+                    (pcf2-state-baseptr state)
+                    value)
             (check-mux-cnd)
             (loop for i from (pcf2-state-baseptr state) to 
                (+ (pcf2-state-baseptr state) value) do
