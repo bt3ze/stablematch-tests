@@ -54,7 +54,7 @@
   (restart-case
       (let ((state (setup-labels ops
                                  (with-open-file (inputs inpname :direction :input)
-                                   (init-state 2000000 ops inputs 16384 16384)
+                                   (init-state 20000000 ops inputs 1638400 1638400)
                                    )
                                  )
               )
