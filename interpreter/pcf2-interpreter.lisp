@@ -320,7 +320,9 @@ The functions that operate on pcf2-state objects should treat these objects as i
              (let ((opcodes (pcf2-state-iptr state))
                    )
                (if (null opcodes)
-                   state;(loop for i from 65 to (+ 65 31) collect (aref (pcf2-state-memory state) i))
+                   (progn
+		     (print state)
+		     state );(loop for i from 65 to (+ 65 31) collect (aref (pcf2-state-memory state) i))
                    (let* ((op (first opcodes))
                           (newstate (run-opcode state op))
                           (state (update-state newstate
