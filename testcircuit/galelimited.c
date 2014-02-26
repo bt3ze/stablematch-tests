@@ -73,12 +73,16 @@ void secure_input(unsigned int * suitor_pref_, unsigned int * reviewer_pref_){
 }
 
 
-void output(unsigned int * matches_ ){
+void output(unsigned int * matches_, unsigned int * match_r_ ){
   unsigned int * matches = matches_;
+  unsigned int * match_r = match_r_;
   unsigned int i;
   for(i = 0; i < NUM_SUITORS; ++i){
     output_alice(matches[i]);
   }
+  for(i = 0; i < NUM_REVIEWERS; ++i){
+    output_bob(match_r[i]);
+ }
 }
 #endif
 
@@ -271,7 +275,7 @@ void main(void){
   secure_input(suitor_pref, reviewer_pref);    
   setup(matches, matches_r, suitor_round); // reviewer_counts
   match(matches, matches_r, suitors, reviewers, suitor_pref, reviewer_pref, suitor_round);//, reviewer_counts);
-  output(matches);
+  output(matches, matches_r);
 }
 #endif
 
@@ -286,6 +290,7 @@ void main(void){
   setup(matches, matches_r,suitor_round); // reviewer_counts, 
   match(matches, matches_r, suitors, reviewers, suitor_pref, reviewer_pref, suitor_round);//, reviewer_counts);
   output(matches, NUM_SUITORS);
+  output(matches_r, NUM_REVIEWERS);
 }
 #endif
 
