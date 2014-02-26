@@ -1,11 +1,11 @@
 // global variables needed for the stable matching
-#define NUM_SUITORS 100 // number of suitors and reviewers
-#define NUM_REVIEWERS 100
+#define NUM_SUITORS 200 // number of suitors and reviewers
+#define NUM_REVIEWERS 200
 #define NIL NUM_REVIEWERS // MUST be chosen to be the greater of NUM_SUITORS and NUM_REVIEWERS
 
 // number of potential matches we permit each player to rank of the opposite party before declaring they would rather remain unmatched
-#define K_SUITORS 60
-#define K_REVIEWERS 3
+#define K_SUITORS 50
+#define K_REVIEWERS 10
 
 //#define __CPROG__
 #define __PCFPROG__
