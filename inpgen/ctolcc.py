@@ -5,7 +5,7 @@ buffer = []
 
 def emptybuf(bffr):
     while len(bffr) > 0:
-        sys.stdout.write("{0:0<3}".format(hex(bffr.pop())[2:]))
+        sys.stdout.write("{0:0>3}".format(hex(bffr.pop())[2:]))
     print ""    
 
 def process(line):
